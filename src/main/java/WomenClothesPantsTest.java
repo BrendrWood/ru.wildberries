@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public class WomenClothesPants extends WebDriverSettings {
+public class WomenClothesPantsTest extends WebDriverSettings {
 
     @Test
-    public void womenClothesPants () {
+    public void womenClothesPantsTest () {
         driver.findElement(By.xpath(ArrayXpath.xpath[5])).click();
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h1[@class='catalog-title']")));
         String title = driver.getTitle();
