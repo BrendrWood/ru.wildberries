@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.junit.Before;
 import org.junit.After;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,10 +24,11 @@ public class WebDriverSettings {
         driver.get("https://www.wildberries.ru/");
         driver.findElement(By.xpath("//button[@class='nav-element__burger j-menu-burger-btn']")).click();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@class='menu-burger__main-list-item j-menu-main-item menu-burger__main-list-item--subcategory']")));
         action = new Actions(driver);
-        WebElement woman = driver.findElement(By.xpath("//li[@class='menu-burger__main-list-item j-menu-main-item menu-burger__main-list-item--subcategory']"));
-        action.moveToElement(woman).perform();
+        WebElement women = driver.findElement(By.xpath("//li[@class='menu-burger__main-list-item j-menu-main-item menu-burger__main-list-item--subcategory']"));
+        action.moveToElement(women).perform();
 
    }
     @After

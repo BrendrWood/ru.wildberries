@@ -8,10 +8,10 @@ public class WomenClothesBlousesShirts extends WebDriverSettings {
 
     @Test
     public void womenClothesBlousesShirts () {
-        driver.findElement(By.xpath(ArrayXpath.xpath[2])).click();
+        driver.findElement(By.xpath(ArrayXpath.xpath[2])).click();  //Путь находится в файле ArrayXpath
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h1[@class='catalog-title']")));
         String title = driver.getTitle();
-        Assert.assertTrue(title.equals(ArrayTitles.titles[2]));
+        Assert.assertTrue(title.equals(ArrayTitles.titles[2])); //Title находится в файле ArrayTitles
 
     }
 }
